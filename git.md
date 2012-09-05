@@ -104,3 +104,5 @@ $ git add a
 $ git commit -m "Updated submodule a."
 $ git push
 ```
+
+### git push --tags ###
