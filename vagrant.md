@@ -12,7 +12,8 @@ install OS (Debian)
 
 ### before packaging: ###
 1. apt-get clean
-2. install RubyGems with: --no-rdoc --no-ri
+2. install RubyGems with: --no-rdoc --no-ri or
+    rm -r "$(gem env gemdir)"/doc/*
 3. 
   * Hostname: vagrant-[os-name], e.g. vagrant-debian-lenny
   * Domain: vagrantup.com
