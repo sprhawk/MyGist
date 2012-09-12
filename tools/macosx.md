@@ -66,3 +66,13 @@ sudo ln -s /Volumes/your_hdd_name/Users /Users
 
 
 >> http://blog.alutam.com/2012/04/01/optimizing-macos-x-lion-for-ssd/
+
+
+## 开启" Windows 7 USB Install disk" ##
+
+1. 在系统信息里找到Boot ROM Version (MBP55.00AC.B03)
+2. 打开Boot Camp.app/Contents/Info.plist
+3. 找到<key>DARequiredROMVersions</key>, 增加一项：MBP55.00AC.B03
+4. 找到<key>USBBootSupportedModels</key>， 增加一项：MBP55
+5. 保存并启动BootCamp.app
+
