@@ -40,3 +40,4 @@ project.xcworkspace
 # Tmp files
 \#*\#
 *~
+.*.swp
