@@ -6,3 +6,22 @@ for a in *.added; do mv $a $
 {a%%.added}; done
 ```
 
+防止使用未定义的变量
+>> set -u
+or 
+>> set -o nounset
+
+```shell
+chroot=$1
+...
+rm -rf $chroot/usr/share/doc 
+```
+
+出错时退出shell
+>> set -e
+or 
+>> set -o errexit
+
+预防文件名带空格
+>> if [ "$filename" = "foo" ]; 
+
