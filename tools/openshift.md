@@ -3,6 +3,5 @@ OpenShift
 
 Save/Restore Snapshots
 ----------------------
-rhc app snapshot save -a Application_Name
-rhc app snapshot restore
-
+rhc snapshot save -a app-name -f file-name
+rhc snapshot restore
