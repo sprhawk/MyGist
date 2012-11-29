@@ -1,6 +1,6 @@
 syntax on
 set expandtab
-set smartindent
+"set smartindent
 set tabstop=4
 set shiftwidth=4
 
