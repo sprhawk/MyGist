@@ -15,7 +15,7 @@ def find_osstatus_err(err):
             error = ""
             while(code > 0):
                 c = code & 0xff
-                error = "%c" % c + err
+                error = "%c" % c + error
                 code >>= 8
     else:
         error = err
@@ -38,7 +38,7 @@ def print_usage():
     name = sys.argv[0]
     print("Find mysterious OSStatus code")
     print("Usage: " + name + " code")
-    print("eg:    " + name + "1718449215")
+    print("eg:    " + name + " 1718449215")
     print("       " + name + " \"fmt?\"")
 
 if '__main__' == __name__:
