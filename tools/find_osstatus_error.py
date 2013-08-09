@@ -17,6 +17,7 @@ def find_osstatus_err(err):
                 c = code & 0xff
                 error = "%c" % c + error
                 code >>= 8
+        error = "'" + error + "'"
     else:
         error = err
     results = []
