@@ -24,7 +24,7 @@ def find_osstatus_err(err):
                 file = open(path)
                 for l in file:
                     if err in l:
-                        results.append(" ".join(l.split()))
+                        results.append(f + ":" + " ".join(l.split()))
 
     if len(results) > 0:
         return results
