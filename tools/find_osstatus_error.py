@@ -8,14 +8,17 @@ def find_osstatus_err(err):
     SDKROOT = sp.check_output(["xcode-select", "--print-path"]).decode("utf-8").rstrip()
     SDKROOT += "/Platforms/iPhoneOS.platform/Developer/SDKs" 
 
+    error = ""
     if err.isdigit():
         code = int(err)
         if code > 0:
-            err = ""
+            error = ""
             while(code > 0):
                 c = code & 0xff
-                err = "%c" % c + err
+                error = "%c" % c + err
                 code >>= 8
+    else:
+        error = err
     results = []
     for (dirname, subdirs, files) in os.walk(SDKROOT):
         for f in files:
@@ -23,12 +26,12 @@ def find_osstatus_err(err):
                 path = os.path.join(dirname, f)
                 file = open(path)
                 for l in file:
-                    if err in l:
-                        results.append(f + ":" + " ".join(l.split()))
+                    if error in l:
+                        results.append((path, f, " ".join(l.split())))
 
     if len(results) > 0:
         return results
-    return ("Not Found: " + err, )
+    return (("Not Found: " + err, ), )
         
 import sys
 def print_usage():
@@ -44,6 +47,9 @@ if '__main__' == __name__:
         sys.exit(1)
     r = find_osstatus_err(sys.argv[1])
     for l in r:
-        print(l)
+        if len(l) > 1:
+            print(l[1] + ": " + l[2])
+        else:
+            print(l[0])
 
 
