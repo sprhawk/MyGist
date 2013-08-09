@@ -35,7 +35,7 @@ def print_usage():
     name = sys.argv[0]
     print("Find mysterious OSStatus code")
     print("Usage: " + name + " code")
-    print("eg:    " + name + " 1171844921")
+    print("eg:    " + name + "1718449215")
     print("       " + name + " \"fmt?\"")
 
 if '__main__' == __name__:
