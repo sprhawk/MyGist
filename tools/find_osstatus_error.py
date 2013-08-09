@@ -26,9 +26,11 @@ def find_osstatus_err(err):
             if f.endswith(".h"):
                 path = os.path.join(dirname, f)
                 file = open(path)
+                lino = 0
                 for l in file:
+                    lino += 1
                     if error in l:
-                        results.append((path, f, " ".join(l.split())))
+                        results.append((path, f, lino, " ".join(l.split())))
 
     if len(results) > 0:
         return results
@@ -49,8 +51,8 @@ if '__main__' == __name__:
     r = find_osstatus_err(sys.argv[1])
     for l in r:
         if len(l) > 1:
-            print(l[1] + ": " + l[2])
+            print(str(l[1]) + "(" + str(l[2]) + ")" + ": " + str(l[3]))
         else:
-            print(l[0])
+            print(str(l[0]))
 
 
