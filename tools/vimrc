@@ -1,6 +1,17 @@
 syntax on
+set autoindent
+set cindent
 set expandtab
 "set smartindent
 set tabstop=4
 set shiftwidth=4
-
+if has("gui_running")
+    set lines=999 columns=999
+else
+    if exists("+lines")
+        set lines=50
+    endif
+    if exists("+columns")
+        set columns=100
+    endif
+endif
