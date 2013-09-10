@@ -32,7 +32,7 @@ install OS (Debian)
     set `env_keep` variable to `SSH_AUTH_SOCK`
 5. Install VirtualBox Guest Additions
 6. install Ruby, RubyGems, Puppet, Chef, SSH
-7. install emacs, vim, etc
+7. install emacs23-nox, vim-nox, tmux, etc
 8. SSH:
     * Since Vagrant only supports key-based authentication for SSH, you must setup the SSH user to use key-based authentication. This simply requires copying a public key into ~/.ssh/authorized_keys. (http://github.com/mitchellh/vagrant/tree/master/keys/)
     * In order to keep SSH access speedy even when your host computer can't access the internet, be sure to set UseDNS to no in /etc/ssh/sshd_config. This will disable DNS lookup of clients connecting to the server, which speeds up SSH connection.
