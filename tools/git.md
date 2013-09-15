@@ -5,6 +5,7 @@ git
 ```shell
 git checkout --ours -- path/to/file.txt
 git checkout --theirs -- path/to/file.txt
+git pull -Xtheirs
 ```
 
 ### 比较Xcode的Localizable.strings文件 ###
