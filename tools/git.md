@@ -113,3 +113,8 @@ $ git push
 2. Delete the relevant section from .git/config.
 3. Run git rm --cached path_to_submodule (no trailing slash).
 4. Commit and delete the now untracked submodule files.
+
+
+
+### 忽略文件的更改 ###
+git update-index --assume-unchanged <filename>
