@@ -118,3 +118,8 @@ $ git push
 
 ### 忽略文件的更改 ###
 git update-index --assume-unchanged <filename>
+
+
+### 开启色彩输出 ###
+git config --global color.ui true
+

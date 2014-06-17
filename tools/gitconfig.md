@@ -10,4 +10,6 @@
         ll = log --name-status
 [diff "localizablestrings"]
         textconv = "iconv -f utf-16 -t utf-8"
+[color]
+    ui = true
 ```
