@@ -17,3 +17,5 @@ else
         set columns=100
     endif
 endif
+
+" :retab -- change all tabs to spaces
