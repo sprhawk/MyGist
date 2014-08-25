@@ -21,3 +21,8 @@ OpenSSL
        `openssl rsautl -verify -inkey public.pem -keyform PEM -pubin -in signature > verified`
     c. diff -s verified hash (should be same)
 
+2. remove pkcs12 passphrase
+---------------------------
+openssl pkcs12 -in protected.p12 -nodes -out temp.pem
+openssl pkcs12 -export -in temp.pem -out unprotected.p12
+
