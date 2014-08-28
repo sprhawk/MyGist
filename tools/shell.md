@@ -25,3 +25,15 @@ or
 预防文件名带空格
 >> if [ "$filename" = "foo" ]; 
 
+Calculation:
+
+```shell
+    a=5
+    b=`expr $a + 20`
+```
+
+Format output:
+
+```shell
+    printf "%d" 0x14000
+```
