@@ -50,3 +50,13 @@
 /etc/ipsec.d/vpn.secrets
 
     %any yourvpnserver: PSK "shared secrets"
+
+connecting shell
+
+    sudo ipsec auto --up L2TP-PSK-CLIENT
+    sudo sh -c 'echo "c yunti" > /var/run/xl2tpd/l2tp-control'
+
+disconnecting shell
+
+    sudo sh -c 'echo "d yunti" > /var/run/xl2tpd/l2tp-control'
+    sudo ipsec auto --down L2TP-PSK-CLIENT
