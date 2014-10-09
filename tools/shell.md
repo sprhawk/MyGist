@@ -37,3 +37,9 @@ Format output:
 ```shell
     printf "%d" 0x14000
 ```
+
+file name:
+
+```shell
+    basename $1
+```
