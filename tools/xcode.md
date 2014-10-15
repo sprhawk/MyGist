@@ -12,3 +12,5 @@ A script for lookup address in archives:
 find_symbole.sh UUID arch addr
 ```
 
+# short cuts #
+option + command + j -> search in project
