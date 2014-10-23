@@ -43,3 +43,10 @@ file name:
 ```shell
     basename $1
 ```
+
+Substring removeal by pattern 
+
+```shell
+    ${s%*t*}
+    ${s#*t*}
+```
