@@ -8,6 +8,10 @@ rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclud
 -C, --cvs-exclude           auto-ignore files in the same way CVS does
 -S, --sparse                handle sparse files efficiently
 --delete                delete extraneous files from dest dirs
+--delete-before         receiver deletes before xfer, not during
+--delete-excluded       also delete excluded files from dest dirs
+
+--force-delete          force deletion of dirs even if not empty
 
 -r, --recursive             recurse into directories
 -u, --update                skip files that are newer on the receiver
