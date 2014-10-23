@@ -1,6 +1,6 @@
 # rsync #
 
-rsync -n -delete -CrutNS --size-only -v -h --progress  --exclude="xcuserdata" --exclude="*.xcworkspace" --exclude=".DS_Store"  Docs/ /Volumes/Macintosh/Docs/
+rsync -n --delete -delete-before -CrutNS --size-only -v -h --progress  --exclude="xcuserdata" --exclude="*.xcworkspace" --exclude=".DS_Store"  Docs/ /Volumes/Macintosh/Docs/
 rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclude="*.xcworkspace" --exclude=".DS_Store"   Docs/ HONGBOs-MacBook-Pro.local::docs
 
 -n, --dry-run               perform a trial run with no changes made
