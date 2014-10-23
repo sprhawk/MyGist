@@ -5,6 +5,8 @@ rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclud
 
 -n, --dry-run               perform a trial run with no changes made
 
+-C, --cvs-exclude           auto-ignore files in the same way CVS does
+
 -r, --recursive             recurse into directories
 -u, --update                skip files that are newer on the receiver
 -t, --times                 preserve modification times
