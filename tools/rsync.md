@@ -1,5 +1,6 @@
 # rsync #
 
+```
 rsync -n --delete -delete-before -CrutNS --size-only -v -h --progress  --exclude="xcuserdata" --exclude="*.xcworkspace" --exclude=".DS_Store"  Docs/ /Volumes/Macintosh/Docs/
 rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclude="*.xcworkspace" --exclude=".DS_Store"   Docs/ HONGBOs-MacBook-Pro.local::docs
 
@@ -20,3 +21,4 @@ rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclud
 
 -h, --human-readable        output numbers in a human-readable format
 --size-only             skip files that match in size
+```
