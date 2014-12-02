@@ -12,7 +12,7 @@ sudo launchctl load -F /System/Library/LaunchDaemons/com.apple.mDNSResponder.pli
 
 
 MacOSX On SSD
-=============
+-------------
 
 ## Trim Enabler ##
 [http://www.groths.org/?page_id=322]
@@ -76,3 +76,8 @@ sudo ln -s /Volumes/your_hdd_name/Users /Users
 4. 找到<key>USBBootSupportedModels</key>， 增加一项：MBP55
 5. 保存并启动BootCamp.app
 
+
+Mac OSX 10.10 Yosimite
+----------------------
+
+1. 最大化: 点option键
