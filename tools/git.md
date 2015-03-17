@@ -123,3 +123,8 @@ git update-index --assume-unchanged <filename>
 ### 开启色彩输出 ###
 git config --global color.ui true
 
+
+# git daemon #
+    1. touch Project.git/git-daemon-export-ok
+    2. added daemon.receivepack service in Project.git/config
+    3. git daemon --verbose --reuseaddr --base-path="$(pwd)" <directory>
