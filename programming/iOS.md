@@ -23,3 +23,11 @@ func circleImageMask(#radius:CGFloat) -> UIImage {
     return i
 }
 ```
+
+4. 使用 swift 的 IBDesignable 功能需要在 Storyboard 里选择正确的 module ( app 名称 )
+
+5. Objective-C 也是可以使用 IBDesignable 的 ( IB_DESIGNABLE )
+
+6. 在 Playground 里显示动画需要选择 run in full simulator
+
+7. 在 Playground 里显示 View 还是要 import XCPlayground， 和XCPShowView() 方法
