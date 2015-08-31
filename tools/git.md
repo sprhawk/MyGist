@@ -128,3 +128,13 @@ git config --global color.ui true
     1. touch Project.git/git-daemon-export-ok
     2. added daemon.receivepack service in Project.git/config
     3. git daemon --verbose --reuseaddr --base-path="$(pwd)" <directory>
+
+
+### 修改作者信息 ###
+git rebase -i -p <some HEAD before all of your bad commits>
+git commit --amend --author "New Author Name <email@address.com>" 
+git rebase --continue
+git commit --amend --author "New Author Name <email@address.com>" --no-edit && \
+git rebase --continue
+
+[http://stackoverflow.com/questions/750172/change-the-author-of-a-commit-in-git]
