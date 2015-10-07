@@ -50,3 +50,9 @@ Substring removeal by pattern
     ${s%*t*}
     ${s#*t*}
 ```
+
+Disable alias
+
+```shell
+    \ls
+```
