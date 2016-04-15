@@ -1,6 +1,12 @@
 Shell
 =====
 
+临时取消 alias
+
+```shell
+\cp ...
+```
+
 ```shell
 for a in *.added; do mv $a $
 {a%%.added}; done
