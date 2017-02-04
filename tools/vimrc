@@ -1,21 +1,37 @@
+set nocompatible
+
+execute pathogen#infect()
+filetype plugin indent on
+
 syntax on
-set autoindent
-set cindent
 set expandtab
 "set smartindent
+set autoindent
+set cindent
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
+"set softtabstop=4
 
-if has("gui_running")
-    set lines=999 columns=999
-else
-    if exists("+lines")
-        set lines=50
+" set cursorcolumn
+set cursorline
+set number
+set incsearch
+set hlsearch
+
+"set path=.,/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/,,
+set tags=.tags
+
+if has("cscope")
+    set csto=0
+    set cst
+    set nocsverb
+    if filereadable("cscope.out")
+        cs add cscope.out
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
     endif
-    if exists("+columns")
-        set columns=100
-    endif
+    set csverb
 endif
 
-" :retab -- change all tabs to spaces
+"set runtimepath^=~/.vim/bundle/node
+au Filetype html,xml,xsl source ~/.vim/plugins/closetag.vim
