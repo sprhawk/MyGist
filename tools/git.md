@@ -138,3 +138,9 @@ git commit --amend --author "New Author Name <email@address.com>" --no-edit && \
 git rebase --continue
 
 [http://stackoverflow.com/questions/750172/change-the-author-of-a-commit-in-git]
+
+### Clean up Remote Branch ###
+
+```
+git remote prune [-n, --dry-run] [name]
+```
