@@ -22,3 +22,10 @@ rsync -O -vvv -C -ruN --size-only -h --progress  --exclude="xcuserdata" --exclud
 -h, --human-readable        output numbers in a human-readable format
 --size-only             skip files that match in size
 ```
+
+rsync over SSH
+----
+
+```
+rsync --progress -vhz -e "ssh -i /path/to/your/key" youruser@yourip:/path/to/file /path/to/destination
+```
